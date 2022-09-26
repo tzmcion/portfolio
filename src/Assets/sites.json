@@ -1,0 +1,25 @@
+[{
+    "name":"Home",
+    "href":"/",
+    "bg":""
+},
+{
+    "name":"For Recruiters",
+    "href":"/For Recruiters",
+    "bg":"https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+},
+{
+    "name":"Projects",
+    "href":"/Projects",
+    "bg":"https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+},
+{
+    "name":"Github",
+    "href":"/Github",
+    "bg":"https://images.unsplash.com/photo-1591608516485-a1a53df39498?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+},
+{
+    "name":"Contact",
+    "href":"/Contact",
+    "bg":"https://images.unsplash.com/photo-1522096823084-2d1aa8411c13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+}]

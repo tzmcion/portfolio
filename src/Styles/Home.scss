@@ -1,0 +1,204 @@
+.Home{
+    width:100vw;
+    overflow-y: hidden;
+}
+
+.Main{
+    position: absolute;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    .container{
+        position: relative;
+        width:1620px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    overflow: hidden;
+}
+
+.About{
+    position: absolute;
+    left:1.5%;
+    top:105px;
+    width:480px;
+    height:830px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.747);
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    .title{
+        width:100%;
+        text-align: center;
+        color:#6665DD;
+        font-size: 32px;
+        margin: 10px;
+        text-shadow: 0px 0px 5px #6665DD;
+    }
+    .breakpoint{
+        width:95%;
+        background-color: rgba(0, 0, 0, 0.603);
+        height: 3px;
+        border-radius: 2px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        box-shadow: 0px 0px 3px whitesmoke;
+    }
+    .data{
+        width:95%;
+        overflow: auto;
+        overflow-x: hidden;
+        p{
+            font-size: 18px;
+            
+        }
+        img{
+            height: 105%;
+        }
+    }
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+    animation: About_Enter 1.5s ease;
+}
+
+.Stack{
+    position: absolute;
+    width:1020px;
+    height:340px;
+    top:605px;
+    left:560px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.747);
+    animation: Stack_Enter 0.5s ease;
+    .data{
+        width:100%;
+        height:85%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .title{
+        width:90%;
+        height: calc(15% - 33px);
+        font-size: 150%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        margin: 0px auto;
+        text-align: center;
+        color:#6665DD;
+        text-shadow: 0px 0px 5px #6665DD;
+        border-bottom: 2px solid rgba(5, 15, 94, 0.37);
+        border-radius: 2px;
+        
+    }
+    .ListElement{
+        margin-left: 2%;
+        height:25%;
+        width:35%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        img{
+            position: relative;
+            height: 50%;
+            margin-left: 5%;
+        }
+        h5{
+            font-size: 18px;
+            width:50%;
+            margin-left: -80px;
+            text-align: center;
+        }
+    }
+}
+
+.Links{
+    position: absolute;
+    width:1020px;
+    left:560px;
+    height:490px;
+    top:105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .Link{
+        width:49.5%;
+        height:48%;
+        box-shadow: 0px 0px 2px black;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Link:hover{
+        background-position-y: -60px;
+        
+    }
+    .Link-a{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color: white;
+        opacity: 0.2;
+        transition: 0.2s;
+        z-index: 1;
+    }
+    .Link-a:hover{
+        opacity: 0;
+    }
+    .title{
+        position: relative;
+        z-index: 2;
+        pointer-events: none;
+        text-transform: uppercase;
+        color:#9B9ECE;
+        text-shadow: 1px 1px 1px #1f1e47,0px 0px 2px #1f1e47;
+        font-size: 38px;
+    }
+    animation: Links_Enter 0.5s ease;
+}
+
+@keyframes About_Enter{
+    from{
+        top:2000px;
+    }
+    to{
+        top:105px;
+    }
+}
+
+@keyframes Links_Enter {
+    from{
+        left:2000px;
+    }
+    to{
+        left:560px;
+    }
+}
+
+@keyframes Stack_Enter {
+    from{
+        top:2000px
+    }
+    to{
+        top:605px;
+    }
+}
