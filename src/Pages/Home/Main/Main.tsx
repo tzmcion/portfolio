@@ -1,4 +1,4 @@
-import React, { ReactElement, useState,useEffect,useRef } from 'react'
+import React, { ReactElement, useState,useEffect,useRef } from 'react';
 import Navbar from '../../Navbar/Navbar';
 import About from './SubPages/About';
 import Stack from './SubPages/Stack';
@@ -44,6 +44,7 @@ export default function Main({subPage}:MainProps):ReactElement {
           toRender.push(<Projects ending={ending} key={1}  />)
           break;
         case 'github':
+          window.location.href = 'https://github.com/tzmcion';
           break;
         case 'contact':
           break;
