@@ -5,6 +5,7 @@ interface AnimatorProps{
     updateDimensions?: (width:number,height:number) => void,
     render?: () => void,
     stopRender?:() => void,
+    rebuildFields?:() => void,
     isRendering?:boolean
 }
 
@@ -18,9 +19,9 @@ const useCanvas = (ref:RefObject<HTMLCanvasElement>,Animator:AnimatorProps,dimen
             ctx && setAnimator(new Animator(ctx,dimensions.width,dimensions.height));
         }
         if(animator){
-            if(animator.isRendering) animator.isRendering = true;
             if(!animator.isRendering){
                 animator.render && animator.render();
+                animator.isRendering = true;
             }
         }
     },[ref,Animator,animator,dimensions.width,dimensions.height]);
@@ -28,7 +29,8 @@ const useCanvas = (ref:RefObject<HTMLCanvasElement>,Animator:AnimatorProps,dimen
     useEffect(()=>{
         if(animator){
             if(animator.updateDimensions)
-            animator.updateDimensions(dimensions.width,dimensions.height)
+            animator.updateDimensions(dimensions.width,dimensions.height);
+            animator.rebuildFields!();
         }
     },[dimensions,animator])
 

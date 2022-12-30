@@ -79,6 +79,11 @@ class Animator extends MovableBackgroundGradient{
         window.cancelAnimationFrame(this.frame);
     }
 
+    public rebuildFields():void{
+        this.Fields = []
+        this.originals = this.create_fields(50,40,{x:2,y:1},5);
+    }
+
     public render():void{
         this.ctx.clearRect(0,0,this.width,this.height);
         const toDrawLAter:Array<Field> = [];
