@@ -21,8 +21,8 @@ export default function Home():ReactElement {
 
 
   useEffect(()=>{
-    window.addEventListener('wheel',(ev) =>{ ev.deltaY > 0 && paralax(ev.deltaY);/*adding scroll down value delta Y */ });
-    window.addEventListener('touchmove', (ev) =>{paralax(250);})
+    window.addEventListener('wheel',(ev) =>{ ev.deltaY > 0 && paralax(ev.deltaY + 200);/*adding scroll down value delta Y */ });
+    window.addEventListener('touchmove', (ev) =>{paralax(500);})
   },[paralax])
 
   useEffect(()=>{
