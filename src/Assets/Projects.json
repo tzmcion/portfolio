@@ -1,12 +1,29 @@
 [{
-    "name":"PianoBlocksApp",
-    "href":"https://pianoblocksapp.com"
+    "name":"PianoBlocksApp*",
+    "href":"https://react-piano-player-63qjc9wca-tzmcion.vercel.app/"
 },
 {
-    "name":"AdaRealm Minimap",
+    "name":"AdaRealm Minimap*",
     "href":"https://adarealm.io/2d-map"
 },
 {
-    "name":"Sticky Balls",
-    "href":"https://codepen.io/quij_drk/pen/gOMYVGp"
-}]
+    "name":"Javascript Animations",
+    "href":"https://tzmcion.github.io/CS_beta-v.05/"
+},
+{
+    "href":"https://second-inf.vercel.app/Local",
+    "name":"BioInformaticks Local Alignment"
+},
+{
+    "name":"Movies Tinder",
+    "href":"https://tzmcion.github.io/moviesTinder/"
+},
+{
+    "name":"Falling Stars",
+    "href":"https://tzmcion.github.io/Project2/"
+},
+{
+    "name":"Canvas Balls",
+    "href":"https://tzmcion.github.io/project1/"
+}
+]

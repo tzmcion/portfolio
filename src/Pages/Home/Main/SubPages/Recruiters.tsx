@@ -8,11 +8,14 @@ export default function Recruiters({ending}:SubPageProps):ReactElement {
   return (
     <div className={`Recruiters ${ending ? 'Recruiters_ending' : ''}`}>
         <h4>About Me</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde voluptatibus sapiente consequatur facilis repellat praesentium deserunt dolor ipsa ex at corrupti quidem consequuntur, totam consectetur earum accusantium, dolorum minus blanditiis.
-        Suscipit quo quos voluptatibus ipsam vitae sint harum, at voluptates. Magnam commodi ex fuga provident, sint vero, molestias exercitationem saepe at, dolorem quos. Quas accusantium, ducimus quibusdam consequuntur cumque magni.
-        Laudantium totam blanditiis, placeat eius possimus exercitationem! Labore pariatur culpa beatae totam? Alias delectus modi ad recusandae perferendis impedit voluptates aliquam quisquam nesciunt. Perspiciatis perferendis rerum commodi odit. Cupiditate, cum!
-        Minima, fugit. Impedit reiciendis repudiandae voluptas iusto perferendis odio, repellendus ipsa. Ratione perferendis magnam officia quisquam, tempore voluptatum asperiores reiciendis, cumque voluptate deserunt, nisi consectetur labore odit omnis numquam sequi!
-        Quos repellat recusandae sit neque nisi eaque necessitatibus sequi reiciendis, nobis aut obcaecati ea, vero facere qui cumque ducimus, in nemo non. Laborum ea fugiat sapiente accusamus beatae exercitationem aliquid.</p>
+        <p>
+          I'm a first year BioInformatics student on Jagiellonian University in Krakow. As a graduate of a technican school, I'm also a 
+          software developer. I work and worked a lot with Javascript, Typescript and React (mainly those 3 technologies), but I also know Python and C++(a little).
+          As a web developer, I managed to create or participate in various projects, which you can find in 'Projects' page. I'm most proud of 
+          PianoBlocksApp, which is a web app created only by me, it's pirpose is to play midi files on piano online. Also I helped in comercial project
+          'AdaRealm'. I'm eager to work and learn new things, especially with animations. I love doing Canvas animations, as you can see in my projects,
+          and I'm pretty good at it. Anyway, if you want to know more, fell free to contact me. Ciao!
+        </p>
     </div>
   )
 }

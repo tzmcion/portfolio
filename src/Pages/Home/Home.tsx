@@ -15,13 +15,14 @@ export default function Home():ReactElement {
   const dimensions = useDimensions(window.innerWidth,window.innerHeight);
   const [canvasManager] = useCanvas(canvasRef,Animator,dimensions);
   const [isScolled,setIsScrolled] = useState<boolean>(false); //CHANGED!!!
-  const paralax = useParalax(canvasManager,{w:12,h:12},setIsScrolled);
+  const paralax = useParalax(canvasManager,{w:window.innerWidth/160,h:window.innerWidth/160},setIsScrolled);
   const params = useParams();
   const [myParams,setParams] = useState<string>('');
 
 
   useEffect(()=>{
     window.addEventListener('wheel',(ev) =>{ ev.deltaY > 0 && paralax(ev.deltaY);/*adding scroll down value delta Y */ });
+    window.addEventListener('touchmove', (ev) =>{paralax(250);})
   },[paralax])
 
   useEffect(()=>{
@@ -32,10 +33,25 @@ export default function Home():ReactElement {
     }
   },[params])
 
+  const renderData = ():ReactElement =>{
+    if(isScolled){
+      if(window.innerWidth >= 1600){
+        return <Main subPage={myParams} />
+      }else{
+        return <div className='ToSmoll'>
+          <h2>Your device size is too small to see the rest :c</h2>
+          <h4>But you can still scroll to see the wave effect :)</h4>
+              </div>
+      }
+    }else{
+      return <></>
+    }
+  }
+
   return (
     <div className='Home'>
         <canvas className='Background' ref={canvasRef} width={dimensions.width} height={dimensions.height} />
-        {isScolled && <Main subPage={myParams} />}
+        {renderData()}
     </div>
   )
 }

@@ -1,3 +1,5 @@
+@import './palete.scss';
+
 .Home{
     width:100vw;
     overflow-y: hidden;
@@ -200,5 +202,41 @@
     }
     to{
         top:605px;
+    }
+}
+
+.ToSmoll{
+    position: absolute;
+    top:40%;
+    transform: translateY(-50%);
+    left:50%;
+    transform: translateX(-50%);
+    width:80vw;
+    height:fit-content;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px black;
+    padding: 25px;
+    animation: enterSmoll 1s ease;
+    h2{
+        font-size: 16px;
+        text-align: center;
+        color: $secondary;
+        margin-bottom: 10px;
+    }
+    h4{
+        margin-top: 0px;
+        color:$blueBell;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+@keyframes enterSmoll{
+    0%{
+        top:500%;
+    }
+    100%{
+        top:40%;
     }
 }

@@ -7,7 +7,7 @@ interface SubPageProps{
 export default function Main_Points({ending}:SubPageProps):ReactElement {
   return (
     <div className={`Main_Points ${ending ? 'Main_Points_Ending' : ''}`}>
-        <h5>Have in Mind that:</h5>
+        <h4>Have in Mind that:</h4>
         <ul>
             <li>I'm a student so I can only work parttime</li>
             <li>I'm a student so I have to work in hybrid mode</li>

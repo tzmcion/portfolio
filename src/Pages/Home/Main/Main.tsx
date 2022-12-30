@@ -6,6 +6,7 @@ import Links from './SubPages/Links';
 import Recruiters from './SubPages/Recruiters';
 import MainPoints from './SubPages/Main_Points';
 import Projects from './SubPages/Projects';
+import Contact from './SubPages/Contact';
 
 import '../../../Styles/BlocksAnimations.scss';
 
@@ -32,7 +33,6 @@ export default function Main({subPage}:MainProps):ReactElement {
 
   const renderBlocks = ():Array<ReactElement> =>{
     const toRender:Array<ReactElement> = [];
-    console.log(currentPage.toLowerCase());
       switch(currentPage.toLowerCase()){
         case '':
           toRender.push(<About ending={ending} key={1} />,<Stack ending={ending} key={2} />,<Links ending={ending} key={3}/>);
@@ -47,6 +47,7 @@ export default function Main({subPage}:MainProps):ReactElement {
           window.location.href = 'https://github.com/tzmcion';
           break;
         case 'contact':
+          toRender.push(<Contact ending={ending} key={1} />)
           break;
         default:
           break;
