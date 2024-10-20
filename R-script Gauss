@@ -1,0 +1,51 @@
+mean = 30;
+sd = 8;
+
+# Create a sequence of x values ranging from mean - 4*sd to mean + 4*sd
+x <- seq(mean - 4*sd, mean + 4*sd, length = 100)
+
+# Calculate the density of each x value using dnorm
+y <- dnorm(x, mean = mean, sd = sd)
+
+# Plot the normal distribution
+plot(x, y, type = "l", lwd = 2, col = "blue",
+     main = "Gaussian distribution of test with Mean=30 and SD=8",
+     xlab = "Test Score", ylab = "Density")
+
+# Shade the area where x > 22
+x_shade <- seq(22, mean + 4*sd, length = 100)
+y_shade <- dnorm(x_shade, mean = mean, sd = sd)
+
+x_shade_before <- seq(mean - 4*sd, 22, length = 100)
+y_shade_before <- dnorm(x_shade_before, mean = mean, sd = sd)
+
+# Fill the area under the curve before 22 with a different color (light green)
+polygon(c(min(x_shade_before), x_shade_before, 22), 
+        c(0, y_shade_before, 0), col = rgb(0.8, 0.2, 0.1, 0.2))
+
+# Fill the area under the curve
+polygon(c(22, x_shade, max(x_shade)), c(0, y_shade, 0), col = rgb(0, 0, 1, 0.2))
+
+# Add a vertical line at x = 22 for reference
+abline(v = 22, col = "red", lwd = 2, lty = 2)
+
+q25 <- qnorm(0.25, mean = mean, sd = sd)
+q50 <- qnorm(0.50, mean = mean, sd = sd) # This is the mean (median for normal distribution)
+q75 <- qnorm(0.75, mean = mean, sd = sd)
+
+# Add vertical lines for quantiles
+abline(v = q25, col = "green", lwd = 2, lty = 2)
+abline(v = q50, col = "purple", lwd = 2, lty = 2)
+abline(v = q75, col = "orange", lwd = 2, lty = 2)
+
+# Add a legend for clarity
+legend("topright", legend = c("16 points", "25th quantile", "50th quantile (mean)", "75th quantile"),
+       col = c("red", "green", "purple", "orange"), lwd = 2, lty = 2)
+
+density_22 <- dnorm(22, mean = mean, sd = sd)
+
+# Add a point at (22, density_22) to show the probability density value
+points(22, density_22, col = "black", pch = 19, cex = 1.5)
+
+# Add a text label for the probability density value at 22
+text(22, density_22, labels = paste("Probability:", round(density_22, 4)*100), pos = 4, col = "black")
